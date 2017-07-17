@@ -1,12 +1,9 @@
 module StringCalculator
 
   def self.add(string)
-    unless string.include? ","
-      string.to_i
-    else
+    return string.to_i unless string.include? ","
       a, b = string.split(",")
       a.to_i + b.to_i
-    end
   end
 
   # ...and here when the above becomes too complex.
