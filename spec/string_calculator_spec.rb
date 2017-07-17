@@ -12,4 +12,13 @@ RSpec.describe StringCalculator, "#add" do
   end
 
   # more tests go here
+  it "returns the value for a single digit" do
+    (0..9).each do |digit|
+      expect(StringCalculator.add(digit.to_s)).to eql(digit)
+    end
+  end
+
+  # it "returns the sum of two digits when separated by a comma" do
+  #
+  # end
 end
