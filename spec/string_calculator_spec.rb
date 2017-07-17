@@ -22,4 +22,14 @@ RSpec.describe StringCalculator, "#add" do
     expect(StringCalculator.add("1, 2")).to eql(3)
     expect(StringCalculator.add("7, 9")).to eql(16)
   end
+
+  it "returns the sum of two strings of digits when separated by a comma" do
+    expect(StringCalculator.add("12, 45")).to eql(57)
+    expect(StringCalculator.add("45, 159")).to eql(204)
+  end
+
+  it "returns the sum of multiple strings of digits when separated by a comma" do
+    expect(StringCalculator.add("1558, 2, 2442")).to eql(4002)
+    expect(StringCalculator.add("15, 22, 45, 79")).to eql(161)
+  end
 end
