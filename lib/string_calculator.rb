@@ -1,11 +1,11 @@
 module StringCalculator
 
   def self.add(string)
-    # code to be tested goes here...
-    if !string
-      return 0
-    else
+    unless string.include? ","
       string.to_i
+    else
+      a, b = string.split(",")
+      a.to_i + b.to_i
     end
   end
 
