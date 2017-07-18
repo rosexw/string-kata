@@ -32,4 +32,8 @@ RSpec.describe StringCalculator, "#add" do
     expect(StringCalculator.add("1558, 2, 2442")).to eql(4002)
     expect(StringCalculator.add("15, 22, 45, 79")).to eql(161)
   end
+
+  it "handles newlines like they were commas" do
+    expect(StringCalculator.add("1\n2, 3")).to eql(3)
+  end
 end
