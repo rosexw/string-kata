@@ -37,13 +37,13 @@ RSpec.describe StringCalculator, "#add" do
     expect(StringCalculator.add("1\n2, 3")).to eql(6)
   end
 
-  # fix this one...#7
-  # it "allows delimiters to be set" do
-  #   expect(StringCalculator.add(“//;\n2;5")).to eql(7)
-  # end
+  it "allows delimiters to be set" do
+    expect(StringCalculator.add("//;\n2;5")).to eql(7)
+  end
 
-  #8
-  it "raises error if it finds a negative number" do
-    expect ( raise )
+  # 8
+  # it "raises error if it finds a negative number" do
+  #   expect ( raise )
+  # end
 
 end
